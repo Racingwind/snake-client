@@ -12,7 +12,11 @@ const connect = function () {
 
   conn.on("connect", () => {
     console.log("Connected");
-    conn.write("Name: LHU")
+    conn.write("Name: LHU");
+    conn.write("Move: up");
+    // setInterval(() => {
+    //   conn.write("Move: up");
+    // }, 50);
   });
   
   conn.on("data", (data) => {
