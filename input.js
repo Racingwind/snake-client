@@ -1,35 +1,15 @@
+const {KEYS} = require("./constants");
 let connection;
+
+// console.log(KEYS);
+// console.log(KEYS.w);
 
 const handleUserInput = function (data) {
   if (data === '\u0003') {
     process.exit();
   }
-  if (data === 'w') {
-    connection.write("Move: up");
-  }
-  if (data === 'a') {
-    connection.write("Move: left");
-  }
-  if (data === 's') {
-    connection.write("Move: down");
-  }
-  if (data === 'd') {
-    connection.write("Move: right");
-  }
-  if (data === 'e') {
-    connection.write("Say: Do a barrel roll!");
-  }
-  if (data === 'q') {
-    connection.write("Say: I quit!");
-  }
-  if (data === 'z') {
-    connection.write("Say: I'm the best!");
-  }
-  if (data === 'x') {
-    connection.write("Say: No through road");
-  }
-  if (data === 'c') {
-    connection.write("Say: caution!");
+  if (KEYS[data]) {
+    connection.write(KEYS[data]);
   }
 };
 
