@@ -10,8 +10,7 @@ const KEYS = {
   z: "Say: I'm the best!",
   x: "Say: No through road",
   c: "Say: caution!"
-}
-
+};
 
 module.exports = {
   IP,

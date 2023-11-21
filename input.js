@@ -1,10 +1,7 @@
 const {KEYS} = require("./constants");
 let connection;
 
-// console.log(KEYS);
-// console.log(KEYS.w);
-
-const handleUserInput = function (data) {
+const handleUserInput = (data) => {
   if (data === '\u0003') {
     process.exit();
   }
@@ -25,7 +22,5 @@ const setupInput = (conn) => {
 
   return stdin;
 };
-
-
 
 module.exports = {setupInput};
