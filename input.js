@@ -5,16 +5,16 @@ const handleUserInput = function (data) {
     process.exit();
   }
   if (data === 'w') {
-    console.log("Move: up");
+    connection.write("Move: up");
   }
   if (data === 'a') {
-    console.log("Move: left");
+    connection.write("Move: left");
   }
   if (data === 's') {
-    console.log("Move: down");
+    connection.write("Move: down");
   }
   if (data === 'd') {
-    console.log("Move: right");
+    connection.write("Move: right");
   }
 };
 
