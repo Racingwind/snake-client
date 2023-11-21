@@ -1,3 +1,5 @@
+let connection;
+
 const handleUserInput = function (data) {
   if (data === '\u0003') {
     process.exit();
@@ -17,7 +19,8 @@ const handleUserInput = function (data) {
 };
 
 // setup interface to handle user input from stdin
-const setupInput = function () {
+const setupInput = (conn) => {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -27,5 +30,7 @@ const setupInput = function () {
 
   return stdin;
 };
+
+
 
 module.exports = {setupInput};

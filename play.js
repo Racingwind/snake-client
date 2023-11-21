@@ -4,5 +4,4 @@ const input = require("./input");
 
 
 console.log("Connecting ...");
-client.connect();
-input.setupInput();
+input.setupInput(client.connect());
